@@ -1,5 +1,5 @@
-import {appendFile} from 'fs/promises'
-import { fileURLToPath } from 'url';
+import { appendFile } from 'fs/promises'
+import { fileURLToPath } from 'url'
 
 export const create = async () => {
     try {
@@ -13,6 +13,6 @@ export const create = async () => {
     } catch {
         throw new Error('FS operation failed')
     }
-};
+}
 
 create()
