@@ -2,14 +2,14 @@ import { cpus } from "os"
 import { sendResult } from "./worker.js"
 
 export const performCalculations = async () => {
-    const workers = cpus()
+    const workersResults = cpus()
         .map(
             (_, i) => sendResult(10 + i)
                 .then(data => ({ status: 'resolved', data}))
                 .catch(() => ({ status: 'error', data: null }))
         )
 
-    const result = await Promise.all(workers)
+    const result = await Promise.all(workersResults)
 
     return result
 }

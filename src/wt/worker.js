@@ -45,6 +45,7 @@ export const sendResult = (n = 10) => {
     }
 }
 
+
 // if we execute by node this script, then call sendResult
 // otherwise (if we import this script in other module) don't call sendResult
 if (isMainThread) {
